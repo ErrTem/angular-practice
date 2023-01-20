@@ -1,3 +1,4 @@
+import { ModalService } from './services/modal.service';
 import { Observable, tap } from 'rxjs';
 import { ProductsService } from './services/products.service';
 import { IProduct } from './modesl/product';
@@ -15,7 +16,10 @@ export class AppComponent implements OnInit {
   products$: Observable<IProduct[]>
   term =''
 
-  constructor(private productsService: ProductsService) {
+  constructor(
+    private productsService: ProductsService,
+    public modalService: ModalService
+    ) {
 
   }
 

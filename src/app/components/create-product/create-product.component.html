@@ -3,9 +3,11 @@
     class="border w-full py-2 px-4 mb-2" 
     placeholder="Product name"
     formControlName="title"
+    appFocus
     >
 
     <p class="text-red-600 font-medium mb-2"
-    >error</p>
+    *ngIf="title.errors?.minlength && title.touched"
+    >Bob, do something</p>
     <button type="submit" class="py-2 px-4 bg-blue-600 text-white">Create</button>
 </form>

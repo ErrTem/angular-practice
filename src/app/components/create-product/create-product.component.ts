@@ -13,6 +13,11 @@ export class CreateProductComponent implements OnInit {
       Validators.minLength(6)
     ])
   })
+
+  get title() {
+    return this.form.controls.title as FormControl
+  }
+
   constructor() { }
   ngOnInit(): void {
 
